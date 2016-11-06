@@ -1,0 +1,17 @@
+{
+  "name": "koa2",
+  "version": "1.0.0",
+  "description": "this koa test by nodejs",
+  "main": "start.js",
+  "dependencies": {
+    "koa": "^2.0.0",
+    "koa-bodyparser": "^3.2.0",
+    "koa-router": "^7.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "zachrey",
+  "license": "ISC"
+}
