@@ -1,6 +1,10 @@
 //==========================================================================
-//配置文件
+//mongo的连接
 //==========================================================================
-module.exports = {
-    mongoUrl : 'mongodb://localhost/user'
-}
+const 
+    mongoose = require('mongoose'),
+    mUrl = require('./config');
+
+mongoose.connect(mUrl.mongoUrl);
+
+module.exports = mongoose;
