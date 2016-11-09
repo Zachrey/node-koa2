@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <meta charset='utf-8'/>
+        {% block head%}
+        {% if head %}
+            <title>{{title}}</title>
+            <style>{{style}}</style>
+        {% endif %}
+        {% endblock %}
+    </head>
+    <body>
+        {% block header%}
+            {% if userName %}
+            <h1>欢迎: {{userName}}</h1>
+            {% endif %}
+        {% endblock %}
+        {% block body%}
+            <div>content: {{content}}</div>
+        {% endblock %}
+        {% block footer%}
+            {% if footer %}
+            <div>footer: {{footer}}</div>
+            {% endif %}
+        {% endblock %}
+    </body>
+</html>

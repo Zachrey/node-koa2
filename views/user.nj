@@ -1,0 +1,31 @@
+{% extends 'base.nj' %}
+
+
+{% block head %}
+    <title>nunjucks</title>
+    <style>
+        body{
+            background-color: #ccc;
+        }
+        li{
+           list-style: none; 
+        }
+        ul{
+            display: inline-block;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <ul>
+        {% if info %}
+        <li>学号: {{info.id}}</li>
+        <li>专业: {{info.major}}</li>
+        <li>性别: {{info.gender}}</li>
+        <li>电话号码: {{info.phoneNo}}</li>
+        <li>邮箱: {{info.email}}</li>
+        {% else %}
+        <li>body is empty!</li>
+        {% endif %}
+    </ul>
+{% endblock %}

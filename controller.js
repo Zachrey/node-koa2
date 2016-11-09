@@ -2,7 +2,6 @@
 //遍历控制器文件夹，获取路由操作函数
 //==========================================================================
 const fs = require('fs');
-0
 
 var addMapping = async (router, mapping) => {
     for (var url in mapping) {

@@ -9,15 +9,17 @@ const
     views = require('koa-views'),
     path = require('path');
 const PORT = 8000;
+
+//配置nunjucks
 var nj = require('nunjucks');
-nj.configure(path.join(__dirname,'/views'), {
+nj.configure(path.join(__dirname,'views'), {
     autoescape: true,
     koa: app
 });
 //加载静态文件位置
 app.use(serverStatic(__dirname + '/public'));
 //设置动态模块
-app.use(views(path.join(__dirname,'/views'), { map: {nj: 'nunjucks' }}))
+app.use(views(path.join(__dirname,'views'), { map: {nj: 'nunjucks' }}))
 
 app.use(bodyParser());
 //==========================================================================
