@@ -34,6 +34,12 @@ module.exports = (folder) => {
     var 
         f = folder || 'controllers',
         router = require('koa-router')();
+
+    //先配置，跨域问题
+    router.all('*',async (ctx, next) => {
+        ctx.response.set('Access-Control-Allow-Origin','*');
+        next();
+    });
     addControllers(router, f);
     return router.routes();
 }
